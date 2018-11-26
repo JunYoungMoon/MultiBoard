@@ -1,0 +1,30 @@
+﻿- Request.getRemoteAddr() 호출시 ipv4 로 하고 싶을때
+
+Run > Run Confiugrations
+
+ > 좌측 트리 메뉴에서 Apache Tomcat 서버 선택(E.g. Tomcat v7.0 Server at localhost)
+
+ > (x) = Arguments 탭 메뉴 선택
+
+ > VM Arguments (텍스트 박스 영역)
+
+
+Arguments 텍스트 박스 가장 하단에 아래 코드를 추가하면 됩니다. 추가한 후 적용(Apply) 해주세요!!
+
+
+"-Djava.net.preferIPv4Stack=true"
+
+─────────────────────────────────────────────────────────────────────────────
+
+
+- ora-12519 에러 발생시
+
+ was 를 끊고
+
+sqld 에서 conn / as sysdba
+
+alter system set processes=500 scope=spfile;
+
+commit;
+
+─────────────────────────────────────────────────────────────────────────────
